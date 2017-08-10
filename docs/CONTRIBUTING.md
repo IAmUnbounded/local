@@ -1,76 +1,33 @@
-# Contributing to jekyll-mdl
+## Contributing
 
-:+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
+Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
 
-The following is a set of guidelines for contributing to jekyll-mdl.
-These are just guidelines, not rules, use your best judgment and feel free to
-propose changes to this document in a pull request.
+Please note that this project is released with a [Contributor Code of Conduct][code-of-conduct]. By participating in this project you agree to abide by its terms.
 
-## Submitting Issues
+## Submitting a pull request
 
-* You can create an issue [here](https://github.com/gdg-managua/jekyll-mdl/issues/new),
-  and include as many details as possible with your report.
-* Include the version of Jekyll you are using, the OS and the browser version and name.
-* Include screenshots and animated GIFs whenever possible; they are immensely
-  helpful.
-* Include the behavior you expected and other places you've seen that behavior
-  such as Emacs, vi, Xcode, etc.
-* Check the web console for errors to include. If you can reproduce the error, use this approach to get the
-  full stack trace and include it in the issue.
-* Perform a [cursory search](https://github.com/gdg-managua/jekyll-mdl/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+)
-  to see if a similar issue has already been submitted.
-* Please setup a [profile picture](https://help.github.com/articles/how-do-i-set-up-my-profile-picture)
-  to make yourself recognizable and so we can all get to know each other better.
+0. [Fork][fork] and clone the repository
+0. Configure and install the dependencies: `script/bootstrap`
+0. Make sure the tests pass on your machine: `script/cibuild`
+0. Create a new branch: `git checkout -b my-branch-name`
+0. Make your change, add tests, and make sure the tests still pass
+0. Push to your fork and [submit a pull request][pr]
+0. Pat your self on the back and wait for your pull request to be reviewed and merged.
 
-## Pull Requests
+Here are a few things you can do that will increase the likelihood of your pull request being accepted:
 
-* Include screenshots and animated GIFs in your pull request whenever possible.
-* Follow the [Material Design](https://www.google.com/design/spec/material-design/introduction.html) styleguides.
-* End files with a newline.
-* Please open an issue and reference this with your pull request
-* See the [pull request guide](#pull-request-and-issue-styleguide)
+- If you are making visual changes, include a screenshot of what the affected element looks like, both before and after.
+- Follow the [style guide][style].
+- Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
+- Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
-## Git Commit Messages
+## Resources
 
-* Use the present tense ("Add feature" not "Added feature")
-* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-* Limit the first line to 72 characters or less
-* Reference issues and pull requests liberally
-* Consider starting the commit message with an applicable emoji:
-    * :art: `:art:` when improving the format/structure of the code
-    * :racehorse: `:racehorse:` when improving performance
-    * :non-potable_water: `:non-potable_water:` when plugging memory leaks
-    * :memo: `:memo:` when writing docs
-    * :penguin: `:penguin:` when fixing something on Linux
-    * :apple: `:apple:` when fixing something on Mac OS
-    * :checkered_flag: `:checkered_flag:` when fixing something on Windows
-    * :bug: `:bug:` when fixing a bug
-    * :fire: `:fire:` when removing code or files
-    * :white_check_mark: `:white_check_mark:` when adding tests
-    * :lock: `:lock:` when dealing with security
-    * :arrow_up: `:arrow_up:` when upgrading dependencies
-    * :arrow_down: `:arrow_down:` when downgrading dependencies
-    * :shirt: `:shirt:` when removing linter warnings
+- [Contributing to Open Source on GitHub](https://guides.github.com/activities/contributing-to-open-source/)
+- [Using Pull Requests](https://help.github.com/articles/using-pull-requests/)
+- [GitHub Help](https://help.github.com)
 
-## Pull request and Issue Styleguide
-
-```
-### DESCRIPTION
-The jekyll-mdl exploded my browser, some performance errors appear.
-
-### Trace
-Here is the stack trace.
-
-### STEPS
-1. Make a bomb.
-2. Activate the bomb.
-3. Place the bomb near of your browser.
-4. RUN!.
-5. The browser exploded.
-
-### EXPECTED
-The jekyll-mdl dont exploded my browser.
-
-### REALITY
-The jekyll-mdl exploded my browser.
-```
+[fork]: https://github.com/pages-themes/hacker/fork
+[pr]: https://github.com/pages-themes/hacker/compare
+[style]: http://ben.balter.com/jekyll-style-guide/
+[code-of-conduct]: CODE_OF_CONDUCT.md

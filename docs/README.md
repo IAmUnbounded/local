@@ -1,77 +1,92 @@
-# jekyll-mdl
-> A Jekyll theme based in Google Material Design Lite library.
+# The Hacker theme
 
-## Demo
+[![Build Status](https://travis-ci.org/pages-themes/hacker.svg?branch=master)](https://travis-ci.org/pages-themes/hacker) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-hacker.svg)](https://badge.fury.io/rb/jekyll-theme-hacker)
 
-You can see the online demo here [www.gdgmanagua.org/jekyll-mdl](http://www.gdgmanagua.org/jekyll-mdl)
+*Hacker is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/hacker), or even [use it today](#usage).*
 
-![Demo](https://raw.githubusercontent.com/gdg-managua/jekyll-mdl/master/jekyll-mdl-screen.png)
+![Thumbnail of hacker](thumbnail.png)
 
-## Sites using jekyll-mdl
+## Usage
 
-If you are using this cool jekyll theme, please open an issue or fork the project, add your site to the list and send us a pull request, we will be happy to know where the theme has been used.
+To use the Hacker theme:
 
-- [prosa100.github.io](http://prosa100.github.io/)
-- [fandekasp.github.io](http://fandekasp.github.io/)
+1. Add the following to your site's `_config.yml`:
 
-## Custom Themes
+    ```yml
+    theme: jekyll-theme-hacker
+    ```
 
-If you don't want the default site colors, you can create custom themes for the site in the [mdl theme creator](http://www.getmdl.io/customize/index.html). The site will create a custom css, something like this:
+2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
 
-     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.teal-green.min.css" />
+    ```ruby
+    gem "github-pages", group: :jekyll_plugins
+    ```
 
-Now add this in the _includes/head.html file, under the main css and enjoy your new theme.
 
-## Post Options
 
-All the post, require an image and maybe an author and declare if the post is highlighted or not, the image are used in the cards and the autor used for the footer in the cards, the highlighted post is used for make this 12 cols and not a card, if you want to use the custom images and set the author and the highlight post, just add a new key in the post config, something like this:
+## Customizing
 
+### Configuration variables
+
+Hacker will respect the following variables, if set in your site's `_config.yml`:
+
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
+```
+
+Additionally, you may choose to set the following optional variables:
+
+```yml
+show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
+```
+
+### Stylesheet
+
+If you'd like to add your own custom styles:
+
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
     ---
-    layout: post
-    title:  "Welcome to jekyll-mdl"
-    date:   2015-07-11 11:34:20
-    categories: jekyll
-    highlight: true
-    image: http://www.wchs4pets.org/wp-content/uploads/2015/03/cat_1-jpg.jpg
-    author: Google Developers Group Managua
     ---
 
-## Layout Configuration
-You can setup 4 types of layout
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
 
-- Fixed Nav + Simple Card Grid
-- Fixed Nav + Highlight Post + Card Grid
-- Drawer Nav + Simple Card Grid
-- Drawer Nav + Highlight Post + Card Grid
+### Layouts
 
-For use this in the [_config.yml](https://github.com/gdg-managua/jekyll-mdl/blob/master/_config.yml) select the type of layout, rebuild the website and voilà :smile:
+If you'd like to change the theme's HTML layout:
+
+1. [Copy the original template](https://github.com/pages-themes/hacker/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+2. Create a file called `/_layouts/default.html` in your site
+3. Paste the default layout content copied in the first step
+4. Customize the layout as you'd like
+
+## Roadmap
+
+See the [open issues](https://github.com/pages-themes/hacker/issues) for a list of proposed features (and known issues).
+
+## Project philosophy
+
+The Hacker theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
 
 ## Contributing
-If you want to contribute to this project, please read the [CONTRIBUTING](https://github.com/gdg-managua/jekyll-mdl/blob/master/CONTRIBUTING.md) file and perform the following steps
 
-    # Fork this repository
-    # Clone your fork
-    jekyll serve --watch
+Interested in contributing to Hacker? We'd love your help. Hacker is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](CONTRIBUTING.md) for instructions on how to contribute.
 
-    git checkout -b feature_branch
-    # Implement your feature and tests
-    git add . && git commit
-    git push -u origin feature_branch
-    # Send a pull request for your feature branch
+### Previewing the theme locally
 
-## Team
-[![Oscar Cortez](https://avatars.githubusercontent.com/u/2553459?v=3&s=100)](http://github.com/oscarmcm) | [![Byron Corrales](https://avatars.githubusercontent.com/u/99616?v=3&s=100)](https://github.com/byroncorrales)
----|---
-[Oscar Cortez](http://github.com/oscarmcm) | [Byron Corrales](https://github.com/byroncorrales)
-Project Lead | Contributor
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-## License
-Licensed under the Apache 2.0 license.
+1. Clone down the theme's repository (`git clone https://github.com/pages-themes/hacker`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `bundle exec jekyll serve` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
 
-See the [LICENSE](https://github.com/gdg-managua/jekyll-mdl/blob/master/LICENSE.md) file for more details.
+### Running tests
 
-Copyright © 2015 [Google Developers Group Managua](http://www.gdgmanagua.org).
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gdg-managua/jekyll-mdl/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` one before the test script will work.
