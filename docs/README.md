@@ -1,27 +1,77 @@
-# HPSTR Jekyll Theme
+# jekyll-mdl
+> A Jekyll theme based in Google Material Design Lite library.
 
-They say three times the charm, so here is another free responsive Jekyll theme for you. I've learned a ton since open sourcing [my first two themes](https://mademistakes.com/work/jekyll-themes/), and wanted to try a few new things this time around. If you've used my previous themes most of this should be familiar territory.
+## Demo
 
-**Compatible with Jekyll 3.0 and up.**
+You can see the online demo here [www.gdgmanagua.org/jekyll-mdl](http://www.gdgmanagua.org/jekyll-mdl)
 
-## What HPSTR brings to the table:
+![Demo](https://raw.githubusercontent.com/gdg-managua/jekyll-mdl/master/jekyll-mdl-screen.png)
 
-* Modern and minimal design.
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Sweet animated menu with support for drop-downs.
-* Optional [Disqus](http://disqus.com) comments and social sharing links.
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
-* [Syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) stylesheet to make your code examples look snazzy
-* [Available in Spanish](https://github.com/cruznick/hpstr-jekyll-theme/tree/es). Thanks [@cruznick](https://github.com/cruznick)!
+## Sites using jekyll-mdl
 
-![HPSTR Theme Preview screenshot](http://mmistakes.github.io/hpstr-jekyll-theme/images/hpstr-jekyll-theme-preview.jpg)
+If you are using this cool jekyll theme, please open an issue or fork the project, add your site to the list and send us a pull request, we will be happy to know where the theme has been used.
 
----
+- [prosa100.github.io](http://prosa100.github.io/)
+- [fandekasp.github.io](http://fandekasp.github.io/)
 
-## Getting Started
+## Custom Themes
 
-HPSTR takes advantage of SCSS and data files to make customizing easier. This theme requires Jekyll 3.x and will not work with older versions properly.
+If you don't want the default site colors, you can create custom themes for the site in the [mdl theme creator](http://www.getmdl.io/customize/index.html). The site will create a custom css, something like this:
 
-To learn how to install and use this theme check out the [Setup Guide](https://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/) for more information.
+     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.teal-green.min.css" />
+
+Now add this in the _includes/head.html file, under the main css and enjoy your new theme.
+
+## Post Options
+
+All the post, require an image and maybe an author and declare if the post is highlighted or not, the image are used in the cards and the autor used for the footer in the cards, the highlighted post is used for make this 12 cols and not a card, if you want to use the custom images and set the author and the highlight post, just add a new key in the post config, something like this:
+
+    ---
+    layout: post
+    title:  "Welcome to jekyll-mdl"
+    date:   2015-07-11 11:34:20
+    categories: jekyll
+    highlight: true
+    image: http://www.wchs4pets.org/wp-content/uploads/2015/03/cat_1-jpg.jpg
+    author: Google Developers Group Managua
+    ---
+
+## Layout Configuration
+You can setup 4 types of layout
+
+- Fixed Nav + Simple Card Grid
+- Fixed Nav + Highlight Post + Card Grid
+- Drawer Nav + Simple Card Grid
+- Drawer Nav + Highlight Post + Card Grid
+
+For use this in the [_config.yml](https://github.com/gdg-managua/jekyll-mdl/blob/master/_config.yml) select the type of layout, rebuild the website and voilà :smile:
+
+## Contributing
+If you want to contribute to this project, please read the [CONTRIBUTING](https://github.com/gdg-managua/jekyll-mdl/blob/master/CONTRIBUTING.md) file and perform the following steps
+
+    # Fork this repository
+    # Clone your fork
+    jekyll serve --watch
+
+    git checkout -b feature_branch
+    # Implement your feature and tests
+    git add . && git commit
+    git push -u origin feature_branch
+    # Send a pull request for your feature branch
+
+## Team
+[![Oscar Cortez](https://avatars.githubusercontent.com/u/2553459?v=3&s=100)](http://github.com/oscarmcm) | [![Byron Corrales](https://avatars.githubusercontent.com/u/99616?v=3&s=100)](https://github.com/byroncorrales)
+---|---
+[Oscar Cortez](http://github.com/oscarmcm) | [Byron Corrales](https://github.com/byroncorrales)
+Project Lead | Contributor
+
+## License
+Licensed under the Apache 2.0 license.
+
+See the [LICENSE](https://github.com/gdg-managua/jekyll-mdl/blob/master/LICENSE.md) file for more details.
+
+Copyright © 2015 [Google Developers Group Managua](http://www.gdgmanagua.org).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gdg-managua/jekyll-mdl/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
